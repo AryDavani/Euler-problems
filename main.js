@@ -18,6 +18,7 @@ function multiples35() {
   return sum;
 }
 
+
 /*
 Even Fibonacci numbers
 Problem 2
@@ -42,4 +43,54 @@ function fibonacci() {
     }
   }
   return sum;
+}
+
+
+/*
+Largest prime factor
+Problem 3
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?
+
+answer =
+
+*/
+
+
+function primeNumbers(num) {
+  let primes = [];
+  return primes;
+}
+
+function primeFactors(num) {
+
+  let sum = 0;
+  return sum;
+}
+
+// console.log(primeFactors());
+
+/*
+Largest palindrome product
+Problem 4
+A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+Find the largest palindrome made from the product of two 3-digit numbers.
+
+answer = 906609
+*/
+
+
+function palindrome() {
+  let dromes = [];
+  for (var i = 999; i > 99; i--) {
+    for (var j = 999; j > 99; j--) {
+      let num = i * j;
+      if (num.toString().split("").join("") === num.toString().split("").reverse().join("")){
+        dromes.push(num);
+      }
+    }
+  }
+  return Math.max.apply(null, dromes);
 }
