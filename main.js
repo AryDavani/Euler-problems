@@ -90,8 +90,8 @@ answer = 906609
 function problemFour() {
   let dromes = [];
   for (var i = 999; i > 99; i--) {
-    for (var j = 999; j > 99; j--) {
-      let num = i * j;
+    for (var k = 999; k > 99; k--) {
+      let num = i * k;
       if (num.toString().split("").join("") === num.toString().split("").reverse().join("")){
         dromes.push(num);
       }
@@ -106,9 +106,20 @@ Problem 5
 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
-answer =
+
+answer = 232792560
 */
 
 function problemFive() {
-
+  for (var i = 2520; i > i - 1; i++) {
+    let counter = 0;
+    for (var k = 1; k < 21; k++) {
+      if (i%k === 0) {
+        counter++;
+        if (counter === 20) {
+          return i;
+        }
+      }
+    }
+  }
 }
