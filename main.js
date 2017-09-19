@@ -156,3 +156,29 @@ function problemSix() {
 
 
 /*
+10001st prime
+Problem 7
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+What is the 10001st prime number?
+
+answer = 104743
+*/
+
+function problemSeven() {
+  let primes = [2];
+  for (var i = 3; i < i + 1; i++) {
+    let test = [];
+    for (var k = 2; k < i; k++) {
+      if ((i%k != 0) && ((i/k)%1 != 0)) {
+        test.push(i);
+        if (test.length === i - 2) {
+          primes.push(i);
+          if (primes.length === 10001) {
+            return primes[primes.length - 1]
+          }
+        }
+      }
+    }
+  }
+}
