@@ -8,7 +8,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 answer = 233168
 */
 
-function multiples35() {
+function problemOne() {
   let sum = 0;
   for (var i = 0; i < 1000; i++) {
     if (i%3 === 0 || i%5 === 0) {
@@ -17,6 +17,8 @@ function multiples35() {
   }
   return sum;
 }
+
+
 
 
 /*
@@ -31,7 +33,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 answer = 4613732
 */
 
-function fibonacci() {
+function problemTwo() {
   let array = [1, 2];
   let sum = 0;
   while (array[array.length - 1] < 4000000) {
@@ -46,6 +48,8 @@ function fibonacci() {
 }
 
 
+
+
 /*
 Largest prime factor
 Problem 3
@@ -54,7 +58,6 @@ The prime factors of 13195 are 5, 7, 13 and 29.
 What is the largest prime factor of the number 600851475143 ?
 
 answer =
-
 */
 
 
@@ -68,8 +71,11 @@ function primeFactors(num) {
   let sum = 0;
   return sum;
 }
-
 // console.log(primeFactors());
+
+
+
+
 
 /*
 Largest palindrome product
@@ -81,8 +87,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 answer = 906609
 */
 
-
-function palindrome() {
+function problemFour() {
   let dromes = [];
   for (var i = 999; i > 99; i--) {
     for (var j = 999; j > 99; j--) {
@@ -93,4 +98,17 @@ function palindrome() {
     }
   }
   return Math.max.apply(null, dromes);
+}
+
+/*
+Smallest multiple
+Problem 5
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+answer =
+*/
+
+function problemFive() {
+
 }
