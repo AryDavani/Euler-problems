@@ -48,8 +48,6 @@ function problemTwo() {
 }
 
 
-
-
 /*
 Largest prime factor
 Problem 3
@@ -72,8 +70,6 @@ function primeFactors(num) {
   return sum;
 }
 // console.log(primeFactors());
-
-
 
 
 
@@ -165,23 +161,24 @@ What is the 10001st prime number?
 answer = 104743
 */
 
-function problemSeven() {
-  let primes = [2];
-  for (var i = 3; i < i + 1; i++) {
-    let test = [];
-    for (var k = 2; k < i; k++) {
-      if ((i%k != 0) && ((i/k)%1 != 0)) {
-        test.push(i);
-        if (test.length === i - 2) {
-          primes.push(i);
-          if (primes.length === 10001) {
-            return primes[primes.length - 1]
-          }
-        }
-      }
-    }
-  }
-}
+
+// function problemSeven() {
+//   let primes = [2];
+//   for (var i = 3; i < i + 1; i++) {
+//     let test = [];
+//     for (var k = 2; k < i; k++) {
+//       if ((i%k != 0) && ((i/k)%1 != 0)) {
+//         test.push(i);
+//         if (test.length === i - 2) {
+//           primes.push(i);
+//           if (primes.length === 10001) {
+//             return primes[primes.length - 1];
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 /*
 Largest product in a series
@@ -235,3 +232,83 @@ function problemEight(series) {
 }
 
 // console.log(problemEight(numbers));
+
+
+/*
+Special Pythagorean triplet
+Problem 9
+A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+
+a2 + b2 = c2
+For example, 32 + 42 = 9 + 16 = 25 = 52.
+
+There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+Find the product abc.
+
+*/
+
+function problemNine() {
+  let thousand = 0;
+  while (thousand != 1000) {
+    for (var i = 0; i < array.length; i++) {
+      array[i]
+    }
+  }
+  return;
+}
+
+// console.log(problemNine());
+
+
+
+
+
+
+/*
+Summation of primes
+Problem 10
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below two million.
+*/
+
+// works but doesn't scale well.
+
+function problemTen(num) {
+  let sum = 2;
+  for (var i = 3; i < num; i = i + 2) {
+    let test = [];
+    for (var k = 2; k < i; k++) {
+      if ((i%k !== 0) && ((i/k)%1 !== 0)) {
+        test.push(i);
+        if (test.length === i - 2) {
+          sum += i;
+        }
+      }
+    }
+  }
+  return sum;
+}
+
+
+// scales better
+
+var primes = [2];
+
+function isPrime(x) {
+  for (var i = 2; i < x; i++) {
+    if (x % i === 0) {
+      return;
+    }
+  }
+  primes.push(x);
+}
+
+function sumOfPrimes(y) {
+  for (var i = 3; i < y; i++) {
+    isPrime(i);
+  }
+  return primes.reduce((total, num) => { return total + num; });
+}
+
+// console.log(sumOfPrimes(10));
